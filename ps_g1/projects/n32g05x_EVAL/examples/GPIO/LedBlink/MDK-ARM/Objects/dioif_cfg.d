@@ -1,0 +1,10 @@
+.\objects\dioif_cfg.o: ..\BSW\Mcalif\Dioif\Dioif_Cfg.c
+.\objects\dioif_cfg.o: ..\BSW\Mcalif\Dioif\Dioif_Cfg.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\dioif_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\dioif_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\dioif_cfg.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_gpio.h

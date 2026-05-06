@@ -1,0 +1,914 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information:  ,  , LIC=IK1BF-68IJH-QD6KD-82ETE-ZWPZZ-JL2WQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\ps_g1_666\projects\n32g05x_EVAL\examples\GPIO\LedBlink\MDK-ARM\DMASineWave.uvprojx
+Project File Date:  04/29/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'N32G05x'
+compiling system_n32g05x.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.c: 1 warning, 0 errors
+assembling startup_n32g05x.s...
+compiling EcuM.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Led\led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\BSW\Mcalif\Timrif\Timrif.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif /* __TIMRIF_H__ */
+..\BSW\SystemService\EcuM\EcuM.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ECUM_H__ */
+..\BSW\SystemService\EcuM\EcuM.c(60): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\SystemService\EcuM\EcuM.c: 39 warnings, 3 errors
+compiling n32g05x_gpio.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_gpio.c: 1 warning, 0 errors
+compiling AdcM_Cfg.c...
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "AdcM_Cfg.h"
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.c: 4 warnings, 0 errors
+compiling n32g05x_rcc.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_rcc.c: 1 warning, 0 errors
+compiling AdcF.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.c(84): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.c: 5 warnings, 0 errors
+compiling AdcM.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Led\Led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.c(298): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              ADCM->monitor.adcoriginal.current.rmsCuradcX1000 = ADCM->monitor.adcoriginal.current.rmsADC * 478.4/10;// é’ˆå¯¹ç”µé˜»51æ¬? // co->ippc.monitor.adcOri.cur.mulP = 244;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.c(954): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.c: 38 warnings, 3 errors
+compiling n32g05x_dac.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_dac.c: 1 warning, 0 errors
+compiling n32g05x_tim.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_tim.c: 1 warning, 0 errors
+compiling n32g05x_it.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\src\n32g05x_it.c: 1 warning, 0 errors
+compiling n32g05x_dma.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_dma.c: 1 warning, 0 errors
+compiling main.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\src\main.c: 1 warning, 0 errors
+compiling N32_RT_Thread_Task.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Led\Led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\BSW\Mcalif\Timrif\Timrif.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif /* __TIMRIF_H__ */
+..\BSW\SystemService\EcuM\EcuM.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ECUM_H__ */
+..\BSW\SystemService\N32_RT_Thread_Task\N32_RT_Thread_Task.c(178): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\SystemService\N32_RT_Thread_Task\N32_RT_Thread_Task.c: 39 warnings, 3 errors
+compiling WdgM.c...
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\SystemService\WdgM\WdgM.c(30): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\SystemService\WdgM\WdgM.c: 6 warnings, 0 errors
+compiling Adcif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\Adcif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\Mcalif\Adcif\Adcif.c(217): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Adcif\Adcif.c: 8 warnings, 2 errors
+compiling Dioif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\Dioif.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\Dioif.c(100): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Dioif\Dioif.c: 4 warnings, 0 errors
+compiling Dioif_Cfg.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.c(51): warning:  #1-D: last line of file ends without a newline
+  /* end */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.c: 3 warnings, 0 errors
+compiling Portif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\Portif.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\Mcalif\Portif\Portif.c(113): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
+          EXTI_ClearITPendingBit(EXTI_LINE12);
+..\BSW\Mcalif\Portif\Portif.c(127): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Portif\Portif.c: 6 warnings, 0 errors
+compiling Portif_Cfg.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\Portif\Portif_Cfg.c(336): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Portif\Portif_Cfg.c: 3 warnings, 0 errors
+compiling Uartif.c...
+compiling board.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Led\Led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\BSW\Mcalif\Timrif\Timrif.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif /* __TIMRIF_H__ */
+..\rt_thread\board\board.c(138): warning:  #1-D: last line of file ends without a newline
+  }
+..\rt_thread\board\board.c: 38 warnings, 3 errors
+compiling Pwmif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\Portif.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif.c(340): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Pwmif\Pwmif.c: 7 warnings, 0 errors
+compiling ringbuf.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\board\ringbuf.c(12): warning:  #223-D: function "RT_ASSERT" declared implicitly
+      RT_ASSERT(rb != RT_NULL);
+..\rt_thread\board\ringbuf.c(26): warning:  #223-D: function "RT_ASSERT" declared implicitly
+      RT_ASSERT(rb != RT_NULL);
+..\rt_thread\board\ringbuf.c(48): warning:  #223-D: function "RT_ASSERT" declared implicitly
+      RT_ASSERT(rb != RT_NULL);
+..\rt_thread\board\ringbuf.c: 4 warnings, 0 errors
+compiling NVIC.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\NVIC\NVIC.c(20): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\NVIC\NVIC.c: 3 warnings, 0 errors
+compiling Wdgif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif.c(84): warning:  #223-D: function "WWDG_SetWVValue" declared implicitly
+          WWDG_SetWVValue(80);
+..\BSW\Mcalif\Wdgif\Wdgif.c(164): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Wdgif\Wdgif.c: 5 warnings, 0 errors
+compiling Timrif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Timrif\Timrif.h(23): warning:  #1-D: last line of file ends without a newline
+  #endif /* __TIMRIF_H__ */
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Timrif\Timrif.c(165): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\Mcalif\Timrif\Timrif.c: 9 warnings, 0 errors
+compiling clock.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\clock.c: 1 warning, 0 errors
+compiling components.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\components.c: 1 warning, 0 errors
+compiling cpu.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\cpu.c: 1 warning, 0 errors
+compiling idle.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\idle.c: 1 warning, 0 errors
+compiling rtUart.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\rt_thread\board\rtUart.c: 2 warnings, 0 errors
+compiling irq.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\irq.c: 1 warning, 0 errors
+compiling ipc.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\ipc.c: 1 warning, 0 errors
+compiling kservice.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\kservice.c: 1 warning, 0 errors
+compiling mem.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\mem.c: 1 warning, 0 errors
+compiling memheap.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\memheap.c: 1 warning, 0 errors
+compiling mempool.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\mempool.c: 1 warning, 0 errors
+compiling object.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\object.c(262): warning:  #550-D: variable "obj"  was set but never used
+          struct rt_object *obj;
+..\rt_thread\src\object.c: 2 warnings, 0 errors
+compiling slab.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\slab.c: 1 warning, 0 errors
+compiling scheduler.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\scheduler.c: 1 warning, 0 errors
+compiling thread.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\thread.c: 1 warning, 0 errors
+assembling context_rvds.S...
+compiling timer.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\src\timer.c: 1 warning, 0 errors
+compiling cpuport.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\libcpu\arm\cortex-m0\cpuport.c: 1 warning, 0 errors
+compiling cmd.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\components\finsh\cmd.c: 1 warning, 0 errors
+compiling msh.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\components\finsh\msh.c: 1 warning, 0 errors
+compiling shell.c...
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\rt_thread\components\finsh\shell.c: 1 warning, 0 errors
+compiling RTE_BSW.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Led\led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\RTE\RTE_BSW.c(63): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel)
+..\RTE\RTE_BSW.c(87): warning:  #1-D: last line of file ends without a newline
+  }
+..\RTE\RTE_BSW.c: 37 warnings, 4 errors
+compiling RTE_ASW.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\Mcalif\Portif\PortIf.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\Rly\Rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Led\led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\RTE\RTE_ASW.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+..\RTE\RTE_ASW.c: 36 warnings, 3 errors
+compiling Flashif.c...
+..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h(107): warning:  #1215-D: #warning directive: "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+..\BSW\StorageService\Flashif\Flashif_Cfg.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_CFG_H__ */
+..\BSW\Mcalif\NVIC\NVIC.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif /* __NVIC_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_CFG_H_ */
+..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif /* _ADCF_H_ */
+..\rt_thread\config\rtconfig.h(134): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\Mcalif\Adcif\AdcIf.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __ADCIF_H__ */
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(207): error:  #20: identifier "ADCM_adcntc1_info_t" is undefined
+      ADCM_adcntc1_info_t ntc1;
+..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM.h(338): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t AdcM_GetValidValue(AdcCfg_ChanEnumType ucChannal);
+..\BSW\Mcalif\Portif\Portif_Cfg.h(100): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_CFG_H__ */
+..\BSW\Mcalif\Portif\Portif.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PORTIF_H__ */
+..\BSW\Mcalif\Pwmif\Pwmif_Cfg.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_CFG_H__ */
+..\BSW\Mcalif\Pwmif\PwmIf.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif /* __PWMIF_H__ */
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\SystemService\WdgM\WdgM_Cfg.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_CFG_H__ */
+..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_CFG_H__ */
+..\BSW\Mcalif\Wdgif\WdgIf.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGIF_H__ */
+..\BSW\SystemService\WdgM\WdgM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif /* __WDGM_H__ */
+..\BSW\Mcalif\Dioif\Dioif_Cfg.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\Mcalif\Dioif\DioIf.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif /* __DIOIF_CFG_H__ */
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\RTE\RTE_BSW.h(30): error:  #20: identifier "AdcCfg_ChanEnumType" is undefined
+  extern int32_t RTE_Call_AdcM_Vlottage(AdcCfg_ChanEnumType Channel);
+..\RTE\RTE_BSW.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif /* __RTE_BSW_H__ */
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Led\led.h(83): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Log\log.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif /* __LOG_H__ */
+..\ASW\Rly\rly.h(36): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Selfcheck\Selfcheck.h(144): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Precheck\Precheck.h(116): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diag\Diag.h(393): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Diodecheck\Diodecheck.h(64): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\factory\factory.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\ChargeManager\ChargeManager.h(63): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Charging\charging.h(386): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ASW\Cp\cp.h(84): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSW\StorageService\Flashif\Flashif.h(32): warning:  #1-D: last line of file ends without a newline
+  #endif /* __FLASHIF_H__ */
+..\BSW\StorageService\Flashif\Flashif.c(335): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSW\StorageService\Flashif\Flashif.c: 36 warnings, 3 errors
+".\Objects\DMASineWave.axf" - 24 Error(s), 360 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\Geely\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\Device\ARM\ARMCM4\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

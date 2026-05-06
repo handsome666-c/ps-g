@@ -1,0 +1,12 @@
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\n32g05x_led.c
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_led.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\n32g05x_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\n32g05x_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_rcc.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_gpio.h
+.\objects\n32g05x_led.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_spi.h

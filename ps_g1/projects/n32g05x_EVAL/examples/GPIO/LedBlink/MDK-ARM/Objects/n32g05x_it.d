@@ -1,0 +1,9 @@
+.\objects\n32g05x_it.o: ..\src\n32g05x_it.c
+.\objects\n32g05x_it.o: ..\inc\n32g05x_it.h
+.\objects\n32g05x_it.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\n32g05x_it.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\n32g05x_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\n32g05x_it.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\n32g05x_it.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\n32g05x_it.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\n32g05x_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

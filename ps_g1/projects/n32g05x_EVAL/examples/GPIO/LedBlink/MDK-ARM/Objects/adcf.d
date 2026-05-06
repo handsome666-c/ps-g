@@ -1,0 +1,12 @@
+.\objects\adcf.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.c
+.\objects\adcf.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\adcf.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\adcf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\adcf.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\adcf.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\adcf.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\adcf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\adcf.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h
+.\objects\adcf.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h
+.\objects\adcf.o: ..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.h
+.\objects\adcf.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h

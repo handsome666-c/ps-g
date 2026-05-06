@@ -1,0 +1,10 @@
+.\objects\cpuport.o: ..\rt_thread\libcpu\arm\cortex-m0\cpuport.c
+.\objects\cpuport.o: ..\rt_thread\include\rtthread.h
+.\objects\cpuport.o: ..\rt_thread\config\rtconfig.h
+.\objects\cpuport.o: ..\rt_thread\include\rtdebug.h
+.\objects\cpuport.o: ..\rt_thread\include\rtdef.h
+.\objects\cpuport.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\cpuport.o: ..\rt_thread\include\rtservice.h
+.\objects\cpuport.o: ..\rt_thread\include\rtm.h
+.\objects\cpuport.o: ..\rt_thread\include\rtthread.h
+.\objects\cpuport.o: ..\rt_thread\components\finsh\finsh_api.h

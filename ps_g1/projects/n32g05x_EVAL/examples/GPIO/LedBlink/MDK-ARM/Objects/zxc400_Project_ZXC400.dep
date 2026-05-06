@@ -1,0 +1,454 @@
+Dependencies for Project 'zxc400_Project', Target 'ZXC400': (DO NOT MODIFY !)
+CompilerVersion: 6150000::V6.15::ARMCLANG
+F (..\..\..\..\..\1_platform\drivers\src\clock_driver.c)(0x69BA0B36)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/clock_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\crc_driver.c)(0x69CCDED2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/crc_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\crc_driver.h)(0x69CCDED2)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\edma_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/edma_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_irq.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_hw_access.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\edma_hw_access.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/edma_hw_access.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_hw_access.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+F (..\..\..\..\..\1_platform\drivers\src\edma_irq.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/edma_irq.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_irq.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_hw_access.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+F (..\..\..\..\..\1_platform\drivers\src\flash_driver.c)(0x69AA385E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/flash_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\flash_driver.h)(0x69AA385E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\flexcan_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/flexcan_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\flexcan_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\flexcan_access.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\fsl_lpadc.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/fsl_lpadc.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\fsl_lpadc.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\fsl_common.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x5F36D096)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F36D0A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F36D0AE)
+F (..\..\..\..\..\1_platform\drivers\src\gpio_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/gpio_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\gpio_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\interrupt_manager_111111.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/interrupt_manager_111111.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\devices\startup\startup.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\iwdog_driver.c)(0x69CA07A5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/iwdog_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\iwdog_driver.h)(0x69C3A9BD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F36D0A4)
+F (..\..\..\..\..\1_platform\drivers\src\lpuart_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/lpuart_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\lpuart_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\pin_driver.c)(0x698583EF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/pin_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\pin_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\power_manager.c)(0x69CA2D6F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/power_manager.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\rtc_driver.c)(0x69C4EDBA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/rtc_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\rtc_driver.h)(0x69C4E567)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\tim_driver.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\src_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/src_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\src_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\sysctl_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/sysctl_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\sysctl_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\tim_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\tim_driver.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/tim_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\tim_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\trgmux_driver.c)(0x69BB67E3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/trgmux_driver.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\trgmux_driver.h)(0x69BB67E3)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\trgmux_hw_access.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\sysctl_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\tim_driver.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\trgmux_hw_access.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/trgmux_hw_access.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\trgmux_hw_access.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\trgmux_driver.h)(0x69BB67E3)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\wwdog_driver.c)(0x69CA269A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/wwdog_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\wwdog_driver.h)(0x69CA2B77)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F36D0A4)
+F (..\..\..\..\..\1_platform\drivers\src\lpi2c_driver.c)(0x69D8D432)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/lpi2c_driver.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_driver.h)(0x69D5EE29)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_hw_access.h)(0x698958DF)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+F (..\..\..\..\..\1_platform\drivers\src\lpi2c_hw_access.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/lpi2c_hw_access.o -MD)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_hw_access.h)(0x698958DF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_driver.h)(0x69D5EE29)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\drivers\src\lpi2c_irq.c)(0x69DC5B67)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/lpi2c_irq.o -MD)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_driver.h)(0x69D5EE29)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_hw_access.h)(0x698958DF)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_irq.h)(0x6982FF11)
+F (..\..\..\printf_uart\log_print.c)(0x69B9219A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/log_print.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F36D0A4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F36D092)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F36D0B4)
+I (..\..\..\printf_uart\log_print.h)(0x69D8D102)
+I (..\..\..\..\..\1_platform\drivers\inc\pin_driver.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpuart_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+F (..\src\main.c)(0x69D89CBB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/main.o -MD)
+I (..\inc\test_case.h)(0x6982FF13)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_driver.h)(0x69D5EE29)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_hw_access.h)(0x698958DF)
+I (..\..\..\printf_uart\log_print.h)(0x69D8D102)
+I (..\..\..\..\..\1_platform\drivers\inc\pin_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpuart_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+I (..\inc\cache.h)(0x6982FF12)
+F (..\src\cache.c)(0x6982FF12)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/cache.o -MD)
+I (..\inc\cache.h)(0x6982FF12)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+F (..\src\test_case.c)(0x69D89CAB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/test_case.o -MD)
+I (..\inc\test_case.h)(0x6982FF13)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_driver.h)(0x69D5EE29)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\edma_driver.h)(0x6982FF11)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpi2c_hw_access.h)(0x698958DF)
+I (..\..\..\printf_uart\log_print.h)(0x69D8D102)
+I (..\..\..\..\..\1_platform\drivers\inc\pin_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\lpuart_driver.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+I (..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h)(0x6982FF11)
+F (..\..\..\..\..\1_platform\devices\startup\startup.c)(0x6982FF11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/startup.o -MD)
+I (..\..\..\..\..\1_platform\devices\startup\startup.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+F (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.c)(0x69CB31A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/system_zxc400.o -MD)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)
+I (..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\wwdog_driver.h)(0x69CA2B77)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\drivers\inc\status.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\drivers\inc\iwdog_driver.h)(0x69C3A9BD)
+I (..\..\..\..\..\1_platform\drivers\inc\clock_driver.h)(0x69BA1213)
+I (..\..\..\..\..\1_platform\drivers\inc\power_manager.h)(0x69CA2D74)
+F (..\..\..\..\..\1_platform\devices\startup\startup_ZXC400.S)(0x6982FF11)(--target=armv7em-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -masm=auto -c-mlittle-endian -gdwarf-3-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION=533 -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/startup_zxc400.o)
+F (..\..\..\..\..\2_rtos\osif\osif_baremetal.c)(0x60C2FE52)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-mlittle-endian -gdwarf-3 -ffunction-sections -w -I ../../../../../1_platform/devices/include -I ../../../../../1_platform/devices/startup -I ../../../../../1_platform/drivers/inc -I ../../../../../2_rtos/osif -I ../../../printf_uart -I ../src -I ../inc-I./RTE/_ZXC400-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include-IC:/Users/Geely/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM4/Include-D__UVISION_VERSION="533" -D_RTE_ -DARMCM4 -D_RTE_-o ./objects/osif_baremetal.o -MD)
+I (..\..\..\..\..\2_rtos\osif\osif.h)(0x60C2FE52)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F36D0A8)
+I (..\..\..\..\..\1_platform\devices\include\status.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5F36D0AE)
+I (..\..\..\..\..\1_platform\devices\include\device_registers.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400.h)(0x6982FF11)
+I (..\..\..\..\..\1_platform\devices\include\ZXC400_features.h)(0x69BD2529)
+I (..\..\..\..\..\1_platform\devices\include\devassert.h)(0x6982FF11)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F36D0AC)

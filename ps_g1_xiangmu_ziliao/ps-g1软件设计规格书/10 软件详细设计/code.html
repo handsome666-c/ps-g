@@ -1,0 +1,428 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta charset="utf-8"><title>PS-G1 单元测试用例清单</title>
+<style>
+body{font-family:'宋体',SimSun;font-size:10.5pt;line-height:1.5}
+h1{font-size:16pt;text-align:center;margin-bottom:5pt}
+.info{text-align:center;font-size:10pt;color:#333;margin-bottom:20pt}
+h2{font-size:14pt;margin-top:20pt;border-bottom:1.5pt solid #333;padding-bottom:3pt}
+h3{font-size:12pt;margin-top:10pt}
+.desc{background:#f5f5f5;padding:6pt 10pt;margin:5pt 0 10pt 0;border-left:4pt solid #2F5496;font-size:10pt}
+.t{border-collapse:collapse;width:100%;margin:8pt 0;border-top:2.0pt solid #000;border-bottom:2.0pt solid #000}
+.t th,.t td{border:none;padding:4pt 6pt;vertical-align:top}
+.t thead tr{border-bottom:1.0pt solid #000}
+.t th{font-weight:bold;background:#fff}
+</style></head><body>
+
+<h1>PS-G1 软件详细设计 — 单元测试用例清单</h1>
+<div class="info">基于PS-G1软件详细设计规格书（ASW 10个模块 + BSW 4个模块）整理 | 编制日期：2026-04-24 | 版本：A0</div>
+
+<h2>1 ASW层 — CP模块</h2>
+<div class="desc"><b>核心职责：</b>依据GB/T 18487.1标准，通过检测CP信号线上的电压状态和PWM信号占空比，管理与电动汽车充电连接过程。</div>
+<h3>1.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CP-001</td><td>APP_CP_Task</td><td>正常调度</td><td>初始化状态机，调用Task，验证内部调用顺序</td><td>正常执行无异常</td></tr>
+<tr><td>CP-002</td><td>APP_CP_Task</td><td>重复调用稳定性</td><td>连续调用1000次，检查执行情况</td><td>1000次均正常完成</td></tr>
+<tr><td>CP-003</td><td>APP_CP_SetState</td><td>设置PWM激活</td><td>调用SetState(PWM_ACTIVE)，读取状态</td><td>状态置为激活</td></tr>
+<tr><td>CP-004</td><td>APP_CP_SetState</td><td>设置PWM非激活</td><td>调用SetState(PWM_INACTIVE)，读取状态</td><td>状态置为非激活</td></tr>
+<tr><td>CP-005</td><td>APP_CP_SetState</td><td>边界值-0</td><td>调用SetState(0)，检查状态</td><td>状态为非激活</td></tr>
+<tr><td>CP-006</td><td>APP_CP_SetState</td><td>边界值-255</td><td>调用SetState(255)，检查状态</td><td>状态为激活</td></tr>
+<tr><td>CP-007</td><td>APP_CP_GetCurrentStatus</td><td>初始状态获取</td><td>初始化CP模块，调用GetCurrentStatus</td><td>返回初始待机状态</td></tr>
+<tr><td>CP-008</td><td>APP_CP_GetCurrentStatus</td><td>状态变化后获取</td><td>触发插枪事件，调用GetCurrentStatus</td><td>返回转换后状态</td></tr>
+<tr><td>CP-009</td><td>APP_CP_DetectCPState</td><td>12V电压检测</td><td>输入voltage=1200u,pwm_active=1,调用</td><td>返回CP_VOLTAGE_12V</td></tr>
+<tr><td>CP-010</td><td>APP_CP_DetectCPState</td><td>9V电压检测</td><td>输入voltage=900u,pwm_active=1,调用</td><td>返回CP_VOLTAGE_9V</td></tr>
+<tr><td>CP-011</td><td>APP_CP_DetectCPState</td><td>6V电压检测</td><td>输入voltage=600u,pwm_active=1,调用</td><td>返回CP_VOLTAGE_6V</td></tr>
+<tr><td>CP-012</td><td>APP_CP_DetectCPState</td><td>异常高电压</td><td>输入voltage=5000u,pwm_active=1,调用</td><td>返回异常状态</td></tr>
+<tr><td>CP-013</td><td>APP_CP_DetectCPState</td><td>异常低电压</td><td>输入voltage=50u,pwm_active=1,调用</td><td>返回异常状态</td></tr>
+<tr><td>CP-014</td><td>APP_CP_DetectCPState</td><td>12V上限边界</td><td>输入voltage=1320u(上限),调用</td><td>返回CP_VOLTAGE_12V</td></tr>
+<tr><td>CP-015</td><td>APP_CP_DetectCPState</td><td>12V下限边界</td><td>输入voltage=1080u(下限),调用</td><td>返回CP_VOLTAGE_12V</td></tr>
+<tr><td>CP-016</td><td>APP_CP_DetectCPState</td><td>PWM未激活检测</td><td>输入voltage=900u,pwm_active=0,调用</td><td>返回非PWM状态</td></tr>
+<tr><td>CP-017</td><td>APP_CP_DetectCPState</td><td>0电压输入</td><td>输入voltage=0,pwm_active=1,调用</td><td>返回异常状态</td></tr>
+</tbody></table>
+<h3>1.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CP-018</td><td>is_in_abnormal_zone</td><td>正常12V区域</td><td>输入voltage=1200u，调用</td><td>返回false</td></tr>
+<tr><td>CP-019</td><td>is_in_abnormal_zone</td><td>正常9V区域</td><td>输入voltage=900u，调用</td><td>返回false</td></tr>
+<tr><td>CP-020</td><td>is_in_abnormal_zone</td><td>正常6V区域</td><td>输入voltage=600u，调用</td><td>返回false</td></tr>
+<tr><td>CP-021</td><td>is_in_abnormal_zone</td><td>异常-两区间间</td><td>输入voltage=1050u(间隙)，调用</td><td>返回true</td></tr>
+<tr><td>CP-022</td><td>is_in_abnormal_zone</td><td>异常-极低电压</td><td>输入voltage=100u，调用</td><td>返回true</td></tr>
+<tr><td>CP-023</td><td>is_in_abnormal_zone</td><td>异常-极高电压</td><td>输入voltage=2000u，调用</td><td>返回true</td></tr>
+<tr><td>CP-024</td><td>APP_CP_GetPwmStatus</td><td>PWM正在输出</td><td>设置PWM激活，调用GetPwmStatus</td><td>返回激活状态</td></tr>
+<tr><td>CP-025</td><td>APP_CP_GetPwmStatus</td><td>PWM未输出</td><td>设置PWM非激活，调用GetPwmStatus</td><td>返回非激活状态</td></tr>
+<tr><td>CP-026</td><td>APP_CP_ProcessStateMachine</td><td>状态A→B转换</td><td>初始化STATE_A，输入9V，调用</td><td>状态机正确转换</td></tr>
+<tr><td>CP-027</td><td>APP_CP_ProcessStateMachine</td><td>状态无变化</td><td>输入当前cp_state与上一致，调用</td><td>返回保持事件</td></tr>
+<tr><td>CP-028</td><td>APP_CP_HandleChargerEvent</td><td>处理插枪事件</td><td>输入EVENT_PLUGIN，调用</td><td>正确调用状态转换</td></tr>
+<tr><td>CP-029</td><td>APP_CP_HandleChargerEvent</td><td>处理故障事件</td><td>输入EVENT_FAULT，调用</td><td>触发故障处理</td></tr>
+<tr><td>CP-030</td><td>CP_Voltage_Filter</td><td>正常电压滤波</td><td>模拟多次ADC采样，调用Filter</td><td>返回稳定电压值</td></tr>
+<tr><td>CP-031</td><td>CP_Voltage_Filter</td><td>突变电压滤波</td><td>正常采样中插入异常值，调用</td><td>抑制突变，输出平滑</td></tr>
+</tbody></table>
+
+<h2>2 ASW层 — Charging模块</h2>
+<div class="desc"><b>核心职责：</b>通过状态机执行充电输入和输出命令，为充电部分软件应用功能核心。</div>
+<h3>2.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CHG-001</td><td>APP_CHG_EventPubTopic</td><td>发布插枪事件</td><td>调用EventPubTopic(EVENT_PLUGIN)</td><td>事件成功入队</td></tr>
+<tr><td>CHG-002</td><td>APP_CHG_EventPubTopic</td><td>发布拔枪事件</td><td>调用EventPubTopic(EVENT_UNPLUG)</td><td>事件成功入队</td></tr>
+<tr><td>CHG-003</td><td>APP_CHG_EventPubTopic</td><td>发布自检成功</td><td>调用EventPubTopic(EVENT_SELFCHECK_OK)</td><td>事件成功入队</td></tr>
+<tr><td>CHG-004</td><td>APP_CHG_EventPubTopic</td><td>发布预检成功</td><td>调用EventPubTopic(EVENT_PRECHECK_OK)</td><td>事件成功入队</td></tr>
+<tr><td>CHG-005</td><td>APP_CHG_EventPub</td><td>发布告警带码</td><td>调用EventPub(EVENT_ALARM, 0x01)</td><td>事件及故障码入队</td></tr>
+<tr><td>CHG-006</td><td>APP_CHG_EventPub</td><td>发布保护暂停</td><td>调用EventPub(EVENT_PROTECT_PAUSE, code)</td><td>事件及数据入队</td></tr>
+<tr><td>CHG-007</td><td>APP_CHG_EventPub</td><td>发布故障事件</td><td>调用EventPub(EVENT_FAULT, code)</td><td>故障事件及码入队</td></tr>
+<tr><td>CHG-008</td><td>APP_CHG_StateMachineDispatch</td><td>空闲态调度</td><td>初始化IDLE，无事件时调用Dispatch</td><td>返回OK，状态不变</td></tr>
+<tr><td>CHG-009</td><td>APP_CHG_StateMachineDispatch</td><td>有事件时调度</td><td>发布插枪事件，调用Dispatch</td><td>状态机正确转换</td></tr>
+<tr><td>CHG-010</td><td>APP_CHG_StateMachineDispatch</td><td>连续调度稳定性</td><td>连续调用1000次，检查异常</td><td>每次均返回OK</td></tr>
+<tr><td>CHG-011</td><td>APP_CHG_StateMachineInit</td><td>初始化验证</td><td>调用Init，读取上一次和当前状态</td><td>均初始化为IDLE</td></tr>
+<tr><td>CHG-012</td><td>APP_CHG_StateMachineInit</td><td>重复初始化</td><td>调用Init两次，检查状态</td><td>第二次正确重置</td></tr>
+<tr><td>CHG-013</td><td>APP_CHG_GetChargeStatus</td><td>初始状态获取</td><td>初始化，调用GetChargeStatus</td><td>返回IDLE</td></tr>
+<tr><td>CHG-014</td><td>APP_CHG_GetChargeStatus</td><td>充电中获取</td><td>触发充电流程，调用GetChargeStatus</td><td>返回CHARGING</td></tr>
+<tr><td>CHG-015</td><td>APP_CHG_GetStatusLED</td><td>空闲LED</td><td>状态为IDLE，调用GetStatusLED</td><td>返回空闲LED值</td></tr>
+<tr><td>CHG-016</td><td>APP_CHG_GetStatusLED</td><td>充电中LED</td><td>状态为CHARGING，调用</td><td>返回充电LED值</td></tr>
+<tr><td>CHG-017</td><td>APP_CHG_GetStatusLED</td><td>故障LED</td><td>状态为FAULT，调用</td><td>返回故障LED值</td></tr>
+<tr><td>CHG-018</td><td>APP_CHG_GetFault</td><td>初始无故障</td><td>初始化，调用GetFault</td><td>返回0</td></tr>
+<tr><td>CHG-019</td><td>APP_CHG_GetFault</td><td>有故障码</td><td>触发过流，调用GetFault</td><td>返回对应故障码</td></tr>
+<tr><td>CHG-020</td><td>APP_CHG_IsFaultPresent</td><td>特定故障存在</td><td>触发过流，查询OVER_CURRENT</td><td>返回true</td></tr>
+<tr><td>CHG-021</td><td>APP_CHG_IsFaultPresent</td><td>特定故障不存在</td><td>触发过流，查询OVER_VOLTAGE</td><td>返回false</td></tr>
+<tr><td>CHG-022</td><td>APP_CHG_IsFaultPresent</td><td>无故障时查询</td><td>初始化无故障，查询任意类型</td><td>返回false</td></tr>
+<tr><td>CHG-023</td><td>APP_CHG_IsAnyFaultPresent</td><td>无故障</td><td>初始化，调用IsAnyFaultPresent</td><td>返回false</td></tr>
+<tr><td>CHG-024</td><td>APP_CHG_IsAnyFaultPresent</td><td>有故障</td><td>触发任意故障，调用</td><td>返回true</td></tr>
+<tr><td>CHG-025</td><td>APP_CHG_GetDiodeStatus</td><td>二极管正常</td><td>设置正常，调用GetDiodeStatus</td><td>返回DIODE_OK</td></tr>
+<tr><td>CHG-026</td><td>APP_CHG_GetDiodeStatus</td><td>二极管异常</td><td>设置异常，调用GetDiodeStatus</td><td>返回DIODE_ERROR</td></tr>
+</tbody></table>
+
+<h2>3 ASW层 — Diag模块</h2>
+<div class="desc"><b>核心职责：</b>周期诊断产品功能性是否正常运行，实时监控并上报。包含充电(CHG)和放电(DISCHG)诊断。</div>
+<h3>3.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>DIAG-001</td><td>APP_DIAG_CHG_CurRset</td><td>充电电流复位</td><td>设非零值，调用CurRset，检查</td><td>参数归零/初始值</td></tr>
+<tr><td>DIAG-002</td><td>APP_DIAG_CHG_CurRset</td><td>空指针保护</td><td>传入NULL指针，调用</td><td>不崩溃</td></tr>
+<tr><td>DIAG-003</td><td>APP_DIAG_DISCHG_CurRset</td><td>放电电流复位</td><td>设非零值，调用CurRset，检查</td><td>参数归零</td></tr>
+<tr><td>DIAG-004</td><td>APP_DIAG_CHG_Init</td><td>充电Diag初始化</td><td>调用Init，检查子模块状态</td><td>均初始化为默认值</td></tr>
+<tr><td>DIAG-005</td><td>APP_DIAG_CHG_Init</td><td>重复初始化</td><td>调用Init两次，检查</td><td>第二次正确重置</td></tr>
+<tr><td>DIAG-006</td><td>APP_DIAG_CHG_Update</td><td>充电正常更新</td><td>初始化，调用Update，检查</td><td>数据正确更新</td></tr>
+<tr><td>DIAG-007</td><td>APP_DIAG_CHG_Update</td><td>故障条件下更新</td><td>模拟过流，调用Update，检查标志</td><td>过流标志置位</td></tr>
+<tr><td>DIAG-008</td><td>APP_DIAG_DISCHG_Init</td><td>放电Diag初始化</td><td>调用Init，检查子模块</td><td>均初始化默认值</td></tr>
+<tr><td>DIAG-009</td><td>APP_DIAG_DISCHG_Update</td><td>放电正常更新</td><td>初始化，调用Update</td><td>数据正确更新</td></tr>
+<tr><td>DIAG-010</td><td>APP_DIAG_ChargeManageMain_1ms</td><td>漏电1ms正常</td><td>调用1ms任务，检查计时器</td><td>计时器递增</td></tr>
+<tr><td>DIAG-011</td><td>APP_DIAG_ChargeManageMain_1ms</td><td>漏电周期触发</td><td>连续调用200次，检查判定</td><td>达阈值触发漏电判定</td></tr>
+</tbody></table>
+<h3>3.2 内部函数 — 充电诊断</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>DIAG-012</td><td>APP_DIAG_CHG_LeakageCheck_Init</td><td>漏电初始化</td><td>调用初始化，检查参数</td><td>参数清零</td></tr>
+<tr><td>DIAG-013</td><td>APP_DIAG_CHG_ShortCircuit_Init</td><td>短路初始化</td><td>调用初始化，检查参数</td><td>参数清零</td></tr>
+<tr><td>DIAG-014</td><td>APP_DIAG_CHG_ShortCircuit_Update</td><td>短路正常更新</td><td>模拟正常ADC，调用更新</td><td>无故障触发</td></tr>
+<tr><td>DIAG-015</td><td>APP_DIAG_CHG_ShortCircuit_Check</td><td>短路检测-正常</td><td>输入正常采样值，调用检测</td><td>无故障</td></tr>
+<tr><td>DIAG-016</td><td>APP_DIAG_CHG_ShortCircuit_Check</td><td>短路检测-发生</td><td>输入异常值持续调用达阈值</td><td>短路标志置位</td></tr>
+<tr><td>DIAG-017</td><td>APP_DIAG_CHG_ShortCircuit_GetFaultStatus</td><td>短路状态-无</td><td>无短路，调用GetFaultStatus</td><td>返回false</td></tr>
+<tr><td>DIAG-018</td><td>APP_DIAG_CHG_ShortCircuit_GetFaultStatus</td><td>短路状态-有</td><td>触发短路，调用GetFaultStatus</td><td>返回true</td></tr>
+<tr><td>DIAG-019</td><td>APP_DIAG_CHG_MCU_TempFault_Init</td><td>MCU温度初始化</td><td>传入各阈值参数，调用初始化</td><td>参数正确设置</td></tr>
+<tr><td>DIAG-020</td><td>APP_DIAG_CHG_MCUTempFaultProcess</td><td>MCU正常温度</td><td>输入Temp=50，调用Process</td><td>返回false</td></tr>
+<tr><td>DIAG-021</td><td>APP_DIAG_CHG_MCUTempFaultProcess</td><td>MCU过温触发</td><td>输入Temp=105持续超延时，调用</td><td>返回true，激活</td></tr>
+<tr><td>DIAG-022</td><td>APP_DIAG_CHG_MCUTempFaultProcess</td><td>MCU过温恢复</td><td>触发后降温至75持续超恢复延时</td><td>故障恢复，返回false</td></tr>
+<tr><td>DIAG-023</td><td>APP_DIAG_CHG_isMCUTempFaultActive</td><td>获取MCU过温</td><td>触发过温，调用isActive</td><td>返回true</td></tr>
+<tr><td>DIAG-024</td><td>APP_DIAG_CHG_HandleOverMCUTempProtection</td><td>MCU过温处理</td><td>输入boardFault=true，调用</td><td>上报过温故障事件</td></tr>
+<tr><td>DIAG-025</td><td>APP_DIAG_CHG_RelayFault_Init</td><td>继电器粘连初始化</td><td>传入延时参数，调用初始化</td><td>参数正确设置</td></tr>
+<tr><td>DIAG-026</td><td>APP_DIAG_CHG_RelayFaultProcess</td><td>继电器正常断开</td><td>输入status=false，调用Process</td><td>无故障触发</td></tr>
+<tr><td>DIAG-027</td><td>APP_DIAG_CHG_RelayFaultProcess</td><td>继电器粘连检测</td><td>输入status=true持续超延时</td><td>粘连标志置位</td></tr>
+<tr><td>DIAG-028</td><td>APP_DIAG_CHG_isRelayFaultActive</td><td>继电器状态-无</td><td>无故障，调用isActive</td><td>返回false</td></tr>
+<tr><td>DIAG-029</td><td>APP_DIAG_CHG_isRelayFaultActive</td><td>继电器状态-有</td><td>触发粘连，调用isActive</td><td>返回true</td></tr>
+<tr><td>DIAG-030</td><td>APP_DIAG_CHG_HandleRelayProtection</td><td>继电器故障处理</td><td>输入relayFault=true，调用</td><td>上报故障事件</td></tr>
+<tr><td>DIAG-031</td><td>APP_DIAG_CHG_CurProtector_Init2</td><td>过流初始化</td><td>调用Init2，检查参数</td><td>参数清零，阈值初始化</td></tr>
+<tr><td>DIAG-032</td><td>APP_DIAG_CHG_CurProcess</td><td>电流正常</td><td>输入5A(低于阈值)，调用Process</td><td>无过流故障</td></tr>
+<tr><td>DIAG-033</td><td>APP_DIAG_CHG_CurProcess</td><td>过流触发</td><td>输入15A(超阈值)持续超延时</td><td>过流标志置位</td></tr>
+<tr><td>DIAG-034</td><td>APP_DIAG_CHG_CurIsFaultActive</td><td>过流状态-无</td><td>电流正常，调用IsFaultActive</td><td>返回false</td></tr>
+<tr><td>DIAG-035</td><td>APP_DIAG_CHG_CurIsFaultActive</td><td>过流状态-有</td><td>触发过流，调用IsFaultActive</td><td>返回true</td></tr>
+<tr><td>DIAG-036</td><td>APP_DIAG_CHG_CurIsChargingLocked</td><td>过流锁定</td><td>达锁定条件，调用IsChargingLocked</td><td>返回true</td></tr>
+<tr><td>DIAG-037</td><td>APP_DIAG_CHG_CurReset</td><td>过流重置</td><td>触发过流，调用CurReset</td><td>状态机复位</td></tr>
+<tr><td>DIAG-038</td><td>APP_DIAG_CHG_CurHandleOverCurrentProtection</td><td>过流处理</td><td>输入fault=true,locked=false</td><td>上报过流告警</td></tr>
+<tr><td>DIAG-039</td><td>APP_DIAG_CHG_checkVoltageStatus</td><td>电压正常</td><td>输入220000，调用check</td><td>返回VOLTAGE_NORMAL</td></tr>
+<tr><td>DIAG-040</td><td>APP_DIAG_CHG_checkVoltageStatus</td><td>过压</td><td>输入280000，调用check</td><td>返回VOLTAGE_OVER</td></tr>
+<tr><td>DIAG-041</td><td>APP_DIAG_CHG_checkVoltageStatus</td><td>欠压</td><td>输入70000，调用check</td><td>返回VOLTAGE_UNDER</td></tr>
+<tr><td>DIAG-042</td><td>APP_DIAG_CHG_VoltageProtectionHandler</td><td>过压持续触发</td><td>输入过压值持续超200ms</td><td>过压标志置位</td></tr>
+<tr><td>DIAG-043</td><td>APP_DIAG_CHG_VoltageProtectionHandler</td><td>欠压持续触发</td><td>输入欠压值持续超200ms</td><td>欠压标志置位</td></tr>
+<tr><td>DIAG-044</td><td>APP_DIAG_CHG_VoltageProtectionGetAlarmStatus</td><td>电压报警-无</td><td>电压正常，调用GetAlarm</td><td>返回false</td></tr>
+<tr><td>DIAG-045</td><td>APP_DIAG_CHG_VoltageProtectionGetAlarmStatus</td><td>电压报警-有</td><td>触发过压，调用GetAlarm</td><td>返回true</td></tr>
+<tr><td>DIAG-046</td><td>APP_DIAG_CHG_HandleVoltageProtection</td><td>过欠压处理</td><td>输入voltageFault=true，调用</td><td>上报故障事件</td></tr>
+<tr><td>DIAG-047</td><td>APP_DIAG_CHG_GroundFaultHandler</td><td>接地正常</td><td>输入status=0，调用Handler</td><td>无故障触发</td></tr>
+<tr><td>DIAG-048</td><td>APP_DIAG_CHG_GroundFaultHandler</td><td>接地故障持续</td><td>输入status=1持续超200ms</td><td>接地故障锁定</td></tr>
+<tr><td>DIAG-049</td><td>APP_DIAG_CHG_GroundFaultIsLocked</td><td>接地锁定-未</td><td>接地正常，调用IsLocked</td><td>返回false</td></tr>
+<tr><td>DIAG-050</td><td>APP_DIAG_CHG_GroundFaultIsLocked</td><td>接地锁定-已</td><td>触发超阈值，调用IsLocked</td><td>返回true</td></tr>
+<tr><td>DIAG-051</td><td>APP_DIAG_CHG_HandleGroundProtection</td><td>接地故障处理</td><td>输入groundFault=true，调用</td><td>上报故障事件</td></tr>
+</tbody></table>
+<h3>3.3 内部函数 — 放电诊断</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>DIAG-052</td><td>APP_DIAG_DISCHG_MCUTempFaultProcess</td><td>放电MCU过温</td><td>输入Temp=105持续超延时</td><td>返回true，激活</td></tr>
+<tr><td>DIAG-053</td><td>APP_DIAG_DISCHG_isMCUTempFaultActive</td><td>获取放电MCU过温</td><td>触发过温，调用isActive</td><td>返回true</td></tr>
+<tr><td>DIAG-054</td><td>APP_DIAG_DISCHG_HandleOverMCUTempProtection</td><td>放电MCU过温处理</td><td>输入boardFault=true，调用</td><td>上报过温故障</td></tr>
+<tr><td>DIAG-055</td><td>APP_DIAG_DISCHG_NTC1TempFaultProcess</td><td>NTC1过温触发</td><td>输入超阈值温度持续调用</td><td>NTC1过温激活</td></tr>
+<tr><td>DIAG-056</td><td>APP_DIAG_DISCHG_isNTC1TempFaultActive</td><td>获取NTC1过温</td><td>触发过温，调用isActive</td><td>返回true</td></tr>
+<tr><td>DIAG-057</td><td>APP_DIAG_DISCHG_HandleOverNTC1TempProtection</td><td>NTC1过温处理</td><td>输入boardFault=true，调用</td><td>上报NTC1故障</td></tr>
+<tr><td>DIAG-058</td><td>APP_DIAG_DISCHG_CurProtector_Init2</td><td>放电过流初始化</td><td>调用Init2，检查参数</td><td>参数清零</td></tr>
+<tr><td>DIAG-059</td><td>APP_DIAG_DISCHG_CurProcess</td><td>放电正常电流</td><td>输入正常值，调用Process</td><td>无过流故障</td></tr>
+<tr><td>DIAG-060</td><td>APP_DIAG_DISCHG_CurProcess</td><td>放电过流触发</td><td>输入超阈值持续调用</td><td>过流标志置位</td></tr>
+<tr><td>DIAG-061</td><td>APP_DIAG_DISCHG_CurIsFaultActive</td><td>获取放电过流</td><td>触发放电过流，调用</td><td>返回true</td></tr>
+<tr><td>DIAG-062</td><td>APP_DIAG_DISCHG_CurIsChargingLocked</td><td>放电过流锁定</td><td>达锁定条件，调用</td><td>返回true</td></tr>
+<tr><td>DIAG-063</td><td>APP_DIAG_DISCHG_CurReset</td><td>放电过流重置</td><td>触发过流，调用CurReset</td><td>状态机复位</td></tr>
+<tr><td>DIAG-064</td><td>APP_DIAG_DISCHG_CurHandleOverCurrentProtection</td><td>放电过流处理</td><td>输入fault=true，调用</td><td>上报过流故障</td></tr>
+<tr><td>DIAG-065</td><td>APP_DIAG_DISCHG_checkVoltageStatus</td><td>放电电压正常</td><td>输入220000，调用check</td><td>返回VOLTAGE_NORMAL</td></tr>
+<tr><td>DIAG-066</td><td>APP_DIAG_DISCHG_checkVoltageStatus</td><td>放电过压</td><td>输入270000，调用check</td><td>返回VOLTAGE_OVER</td></tr>
+<tr><td>DIAG-067</td><td>APP_DIAG_DISCHG_checkVoltageStatus</td><td>放电欠压</td><td>输入170000，调用check</td><td>返回VOLTAGE_UNDER</td></tr>
+<tr><td>DIAG-068</td><td>APP_DIAG_DISCHG_VoltageProtectionHandler</td><td>放电过压持续</td><td>输入过压值持续超200ms</td><td>过压标志置位</td></tr>
+<tr><td>DIAG-069</td><td>APP_DIAG_DISCHG_VoltageProtectionGetAlarmStatus</td><td>获取放电电压报警</td><td>触发放电过压，调用</td><td>返回true</td></tr>
+<tr><td>DIAG-070</td><td>APP_DIAG_DISCHG_HandleVoltageProtection</td><td>放电过欠压处理</td><td>输入voltageFault=true，调用</td><td>上报故障</td></tr>
+</tbody></table>
+
+<h2>4 ASW层 — Discharging模块</h2>
+<div class="desc"><b>核心职责：</b>通过状态机执行放电输入和输出命令，为放电部分软件应用功能核心。</div>
+<h3>4.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>DCHG-001</td><td>APP_DISCHG_EventPubTopic</td><td>发布插枪事件</td><td>调用EventPubTopic(EVENT_PLUGIN)</td><td>事件成功入队</td></tr>
+<tr><td>DCHG-002</td><td>APP_DISCHG_EventPubTopic</td><td>发布拔枪事件</td><td>调用EventPubTopic(EVENT_UNPLUG)</td><td>事件成功入队</td></tr>
+<tr><td>DCHG-003</td><td>APP_DISCHG_EventPub</td><td>发布告警带码</td><td>调用EventPub(EVENT_ALARM, 0x02)</td><td>事件及故障码入队</td></tr>
+<tr><td>DCHG-004</td><td>APP_DISCHG_EventPub</td><td>发布保护暂停</td><td>调用EventPub(EVENT_PROTECT_PAUSE, code)</td><td>事件及数据入队</td></tr>
+<tr><td>DCHG-005</td><td>APP_DISCHG_StateMachineDispatch</td><td>空闲态调度</td><td>初始化IDLE，调用Dispatch</td><td>返回OK，状态不变</td></tr>
+<tr><td>DCHG-006</td><td>APP_DISCHG_StateMachineDispatch</td><td>有事件时调度</td><td>发布开始事件，调用Dispatch</td><td>状态机正确转换</td></tr>
+<tr><td>DCHG-007</td><td>APP_DISCHG_StateMachineInit</td><td>初始化验证</td><td>调用Init，读取状态</td><td>均初始化为IDLE</td></tr>
+<tr><td>DCHG-008</td><td>APP_DISCHG_GetChargeStatus</td><td>初始状态获取</td><td>初始化，调用GetChargeStatus</td><td>返回IDLE</td></tr>
+<tr><td>DCHG-009</td><td>APP_DISCHG_GetChargeStatus</td><td>放电中获取</td><td>触发放电流程，调用</td><td>返回DISCHARGING</td></tr>
+<tr><td>DCHG-010</td><td>APP_DISCHG_GetStatusLED</td><td>放电空闲LED</td><td>状态为IDLE，调用GetStatusLED</td><td>返回空闲LED值</td></tr>
+<tr><td>DCHG-011</td><td>APP_DISCHG_GetStatusLED</td><td>放电中LED</td><td>状态为DISCHARGING，调用</td><td>返回放电LED值</td></tr>
+<tr><td>DCHG-012</td><td>APP_DISCHG_GetFault</td><td>初始无故障</td><td>初始化，调用GetFault</td><td>返回0</td></tr>
+<tr><td>DCHG-013</td><td>APP_DISCHG_GetFault</td><td>有放电故障码</td><td>触发放电过流，调用</td><td>返回对应故障码</td></tr>
+<tr><td>DCHG-014</td><td>APP_DISCHG_IsFaultPresent</td><td>特定故障存在</td><td>触发放电过流，查询对应故障</td><td>返回true</td></tr>
+<tr><td>DCHG-015</td><td>APP_DISCHG_IsFaultPresent</td><td>特定故障不存在</td><td>触发放电过流，查询其他故障</td><td>返回false</td></tr>
+<tr><td>DCHG-016</td><td>APP_DISCHG_IsAnyFaultPresent</td><td>无放电故障</td><td>初始化，调用IsAnyFaultPresent</td><td>返回false</td></tr>
+<tr><td>DCHG-017</td><td>APP_DISCHG_IsAnyFaultPresent</td><td>有放电故障</td><td>触发任意故障，调用</td><td>返回true</td></tr>
+</tbody></table>
+
+<h2>5 ASW层 — LED模块</h2>
+<div class="desc"><b>核心职责：</b>直观向用户传递充电设备当前的工作状态。</div>
+<h3>5.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>LED-001</td><td>APP_Led_Init</td><td>LED初始化</td><td>调用Init，检查各通道状态</td><td>均初始化为关闭</td></tr>
+<tr><td>LED-002</td><td>APP_Led_Init</td><td>重复初始化</td><td>调用Init两次，检查</td><td>第二次正确重置</td></tr>
+<tr><td>LED-003</td><td>Led_MainFunction</td><td>主任务正常</td><td>初始化，调用MainFunction</td><td>处理函数被正确调用</td></tr>
+<tr><td>LED-004</td><td>Led_MainFunction</td><td>连续调用稳定性</td><td>连续调用100次</td><td>每次均正常执行</td></tr>
+</tbody></table>
+<h3>5.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>LED-005</td><td>Led_Process</td><td>充电模式</td><td>设置充电模式，调用Process</td><td>显示充电灯语</td></tr>
+<tr><td>LED-006</td><td>Led_Process</td><td>放电模式</td><td>设置放电模式，调用Process</td><td>显示放电灯语</td></tr>
+<tr><td>LED-007</td><td>Led_auto</td><td>绿灯</td><td>设置绿色LED，调用auto</td><td>GPIO正确输出</td></tr>
+<tr><td>LED-008</td><td>Led_auto</td><td>红灯</td><td>设置红色LED，调用auto</td><td>GPIO正确输出</td></tr>
+<tr><td>LED-009</td><td>Led_auto</td><td>蓝灯</td><td>设置蓝色LED，调用auto</td><td>GPIO正确输出</td></tr>
+<tr><td>LED-010</td><td>Led_ShowLoop</td><td>自检循环</td><td>调用ShowLoop，验证点亮</td><td>RGB依次循环点亮</td></tr>
+<tr><td>LED-011</td><td>LED_CHGMODE_Showfault</td><td>充电过流灯语</td><td>输入过流故障，调用Showfault</td><td>红灯闪烁</td></tr>
+<tr><td>LED-012</td><td>LED_CHGMODE_Showfault</td><td>充电过温灯语</td><td>输入过温故障，调用Showfault</td><td>显示过温灯语</td></tr>
+<tr><td>LED-013</td><td>LED_DISCHGMODE_Showfault</td><td>放电故障灯语</td><td>输入放电故障，调用Showfault</td><td>显示放电灯语</td></tr>
+<tr><td>LED-014</td><td>Led_Set_Mode</td><td>常亮模式</td><td>调用Set_Mode(ON)</td><td>LED常亮</td></tr>
+<tr><td>LED-015</td><td>Led_Set_Mode</td><td>闪烁模式</td><td>调用Set_Mode(BLINK)</td><td>按频率闪烁</td></tr>
+<tr><td>LED-016</td><td>Led_Set_Mode</td><td>关闭模式</td><td>调用Set_Mode(OFF)</td><td>LED关闭</td></tr>
+</tbody></table>
+
+<h2>6 ASW层 — Factory模块</h2>
+<div class="desc"><b>核心职责：</b>满足出厂前测试等各项需求。</div>
+<h3>6.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>FAC-001</td><td>fatcory</td><td>进入工厂模式</td><td>argv={"factory","entry"}，调用</td><td>进入工厂模式</td></tr>
+<tr><td>FAC-002</td><td>fatcory</td><td>退出工厂模式</td><td>argv={"factory","exit"}，调用</td><td>退出工厂模式</td></tr>
+<tr><td>FAC-003</td><td>fatcory</td><td>无效命令</td><td>argv={"factory","invalid"}，调用</td><td>不改变状态</td></tr>
+<tr><td>FAC-004</td><td>fatcory</td><td>参数不足</td><td>argv={"factory"}，调用</td><td>不崩溃</td></tr>
+</tbody></table>
+<h3>6.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>FAC-005</td><td>factory_entry_mode</td><td>进入模式</td><td>调用entry_mode</td><td>工厂模式激活，IO正确</td></tr>
+<tr><td>FAC-006</td><td>factory_exit_mode</td><td>退出模式</td><td>先进入，调用exit_mode</td><td>状态清除</td></tr>
+<tr><td>FAC-007</td><td>get_factory_mode_status</td><td>查询-未进入</td><td>初始状态，调用查询</td><td>返回false</td></tr>
+<tr><td>FAC-008</td><td>get_factory_mode_status</td><td>查询-已进入</td><td>进入后，调用查询</td><td>返回true</td></tr>
+</tbody></table>
+
+<h2>7 ASW层 — Log模块</h2>
+<div class="desc"><b>核心职责：</b>监控产品各模块工作状态信息。</div>
+<h3>7.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>LOG-001</td><td>Log_Printf_Main</td><td>正常执行</td><td>初始化，调用Main，检查串口</td><td>正确输出状态信息</td></tr>
+<tr><td>LOG-002</td><td>Log_Printf_Main</td><td>连续调用</td><td>连续调用100次</td><td>均正常，无内存泄漏</td></tr>
+<tr><td>LOG-003</td><td>Log_Printf_Main</td><td>无数据执行</td><td>无待输出日志，调用</td><td>安全返回不崩溃</td></tr>
+</tbody></table>
+
+<h2>8 ASW层 — Calibration模块</h2>
+<div class="desc"><b>核心职责：</b>通过注入方式对电压电流进行校准，校准参数存储在flash内。</div>
+<h3>8.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CAL-001</td><td>Calibration_Update</td><td>进入校准</td><td>设state=ENTRY，调用Update</td><td>继电器断开，转WAIT</td></tr>
+<tr><td>CAL-002</td><td>Calibration_Update</td><td>等待阶段</td><td>设state=WAIT，调用等待200ms</td><td>转INTO，timer=0</td></tr>
+<tr><td>CAL-003</td><td>Calibration_Update</td><td>进行中</td><td>设state=INTO，调用Update</td><td>timer清零，可设参数</td></tr>
+<tr><td>CAL-004</td><td>Calibration_Update</td><td>退出校准</td><td>设state=EXIT，调用Update</td><td>触发系统复位</td></tr>
+<tr><td>CAL-005</td><td>inject</td><td>注入命令</td><td>argv={"inject","param"}，调用</td><td>正确执行</td></tr>
+<tr><td>CAL-006</td><td>inject</td><td>注入参数不足</td><td>argv={"inject"}，调用</td><td>安全返回</td></tr>
+<tr><td>CAL-007</td><td>calibration</td><td>电压校准</td><td>argv含"vol","k","b"，调用</td><td>参数设置成功</td></tr>
+<tr><td>CAL-008</td><td>calibration</td><td>电流校准</td><td>argv含"cur","k","b"，调用</td><td>参数设置成功</td></tr>
+<tr><td>CAL-009</td><td>calibration</td><td>无效类型</td><td>argv含"invalid"，调用</td><td>不修改参数</td></tr>
+<tr><td>CAL-010</td><td>restart</td><td>复位命令</td><td>argv={"restart"}，调用</td><td>触发软件复位</td></tr>
+<tr><td>CAL-011</td><td>relay</td><td>继电器闭合</td><td>argv含"on"，调用</td><td>继电器闭合</td></tr>
+<tr><td>CAL-012</td><td>relay</td><td>继电器断开</td><td>argv含"off"，调用</td><td>继电器断开</td></tr>
+</tbody></table>
+<h3>8.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CAL-013</td><td>calibration_vol_set</td><td>设电压参数</td><td>调用vol_set(k=1000, b=50)</td><td>设置成功</td></tr>
+<tr><td>CAL-014</td><td>calibration_vol_set</td><td>边界-k最大</td><td>调用vol_set(k=0xFFFFFFFF)</td><td>不溢出，设置正确</td></tr>
+<tr><td>CAL-015</td><td>calibration_vol_clear</td><td>清电压参数</td><td>先设置，调用vol_clear</td><td>k和b清零</td></tr>
+<tr><td>CAL-016</td><td>calibration_cur_set</td><td>设电流参数</td><td>调用cur_set(k=2000, b=100)</td><td>设置成功</td></tr>
+<tr><td>CAL-017</td><td>calibration_cur_clear</td><td>清电流参数</td><td>先设置，调用cur_clear</td><td>k和b清零</td></tr>
+<tr><td>CAL-018</td><td>get_calibration_mode_status</td><td>非校准模式</td><td>初始状态，调用查询</td><td>返回0</td></tr>
+<tr><td>CAL-019</td><td>get_calibration_mode_status</td><td>校准模式</td><td>进入校准，调用查询</td><td>返回1或2</td></tr>
+</tbody></table>
+
+<h2>9 ASW层 — 电压测量模块</h2>
+<div class="desc"><b>核心职责：</b>通过RMS计算电压值作为过欠压判断条件。</div>
+<h3>9.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>VOL-001</td><td>AdcM_GetValidValue</td><td>获取电压通道</td><td>设Val=220000，传Voltage_CH调用</td><td>返回220000</td></tr>
+<tr><td>VOL-002</td><td>AdcM_GetValidValue</td><td>无效通道</td><td>传无效Channel调用</td><td>返回0，不崩溃</td></tr>
+<tr><td>VOL-003</td><td>ADCM_CallbackSampleValue</td><td>电压计算处理</td><td>模拟ADC数据，调用Callback</td><td>RMS计算正确</td></tr>
+</tbody></table>
+<h3>9.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>VOL-004</td><td>AdcM_get_V_LINE_MCU_update</td><td>正常采样更新</td><td>输入2048，调用update</td><td>正确写入缓冲区</td></tr>
+<tr><td>VOL-005</td><td>AdcM_get_V_LINE_MCU_update</td><td>最大采样值</td><td>输入65535，调用update</td><td>正确写入</td></tr>
+<tr><td>VOL-006</td><td>AdcM_get_V_LINE_MCU_update</td><td>最小采样值</td><td>输入0，调用update</td><td>正确写入</td></tr>
+<tr><td>VOL-007</td><td>AdcM_cal_V_LINE_MCU_update</td><td>正弦波RMS</td><td>填充正弦波数据，调用cal</td><td>RMS接近有效值</td></tr>
+<tr><td>VOL-008</td><td>AdcM_cal_V_LINE_MCU_update</td><td>采样点不足</td><td>数据不足5个，调用cal</td><td>不执行计算</td></tr>
+</tbody></table>
+
+<h2>10 ASW层 — 电流测量模块</h2>
+<div class="desc"><b>核心职责：</b>通过RMS计算电流值作为过流判断条件。</div>
+<h3>10.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CUR-001</td><td>AdcM_GetValidValue</td><td>获取电流通道</td><td>设Val=5000，传Current_CH调用</td><td>返回5000</td></tr>
+<tr><td>CUR-002</td><td>AdcM_GetValidValue</td><td>无效通道</td><td>传无效Channel调用</td><td>返回0，安全</td></tr>
+<tr><td>CUR-003</td><td>ADCM_CallbackSampleValue</td><td>电流计算处理</td><td>模拟ADC数据，调用Callback</td><td>RMS计算正确</td></tr>
+</tbody></table>
+<h3>10.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>CUR-004</td><td>AdcM_get_I_CS_update</td><td>正常采样更新</td><td>输入2048，调用update</td><td>正确写入缓冲区</td></tr>
+<tr><td>CUR-005</td><td>AdcM_get_I_CS_update</td><td>边界采样值</td><td>输入0和65535分别调用</td><td>均正确写入</td></tr>
+<tr><td>CUR-006</td><td>AdcM_cal_I_CS_update</td><td>正弦波RMS</td><td>填充正弦波数据，调用cal</td><td>RMS接近有效值</td></tr>
+<tr><td>CUR-007</td><td>AdcM_cal_I_CS_update</td><td>采样点不足</td><td>数据不足14个，调用cal</td><td>不执行计算</td></tr>
+</tbody></table>
+
+<h2>11 BSW层 — AdcF模块</h2>
+<div class="desc"><b>核心职责：</b>实现ADC各通道采样值的滤波处理。</div>
+<h3>11.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>ADCF-001</td><td>sortDesc</td><td>正常降序</td><td>输入无序数组，调用排序</td><td>正确降序排列</td></tr>
+<tr><td>ADCF-002</td><td>sortDesc</td><td>空数组</td><td>长度0，调用排序</td><td>不崩溃</td></tr>
+<tr><td>ADCF-003</td><td>sortDesc</td><td>单元素数组</td><td>长度1，调用排序</td><td>不变</td></tr>
+<tr><td>ADCF-004</td><td>sortDesc</td><td>已排序数组</td><td>输入降序数组，调用</td><td>不变</td></tr>
+<tr><td>ADCF-005</td><td>sortDesc</td><td>全相同元素</td><td>输入全同数组，调用</td><td>不变</td></tr>
+<tr><td>ADCF-006</td><td>AdcF_CulateIntAverage_Conversion</td><td>正常平均</td><td>输入data={100,200,300}调用</td><td>返回200</td></tr>
+<tr><td>ADCF-007</td><td>AdcF_CulateIntAverage_Conversion</td><td>去极值平均</td><td>含极值数据去极值调用</td><td>平均值正确</td></tr>
+<tr><td>ADCF-008</td><td>AdcF_CulateIntAverage_Conversion</td><td>长度为0</td><td>length=0，调用</td><td>返回0，不除零</td></tr>
+<tr><td>ADCF-009</td><td>AdcF_CulateIntAverage_Conversion</td><td>长度为1</td><td>length=1，调用</td><td>返回42</td></tr>
+<tr><td>ADCF-010</td><td>FastSqrt</td><td>完全平方数</td><td>输入144，调用</td><td>返回12</td></tr>
+<tr><td>ADCF-011</td><td>FastSqrt</td><td>非完全平方</td><td>输入200，调用</td><td>返回14</td></tr>
+<tr><td>ADCF-012</td><td>FastSqrt</td><td>输入为0</td><td>输入0，调用</td><td>返回0</td></tr>
+<tr><td>ADCF-013</td><td>FastSqrt</td><td>输入为1</td><td>输入1，调用</td><td>返回1</td></tr>
+<tr><td>ADCF-014</td><td>FastSqrt</td><td>大数输入</td><td>输入uint32最大值，调用</td><td>返回65535</td></tr>
+<tr><td>ADCF-015</td><td>hard_root</td><td>正常开方</td><td>输入14400，调用</td><td>返回120</td></tr>
+<tr><td>ADCF-016</td><td>hard_root</td><td>输入为0</td><td>输入0，调用</td><td>返回0</td></tr>
+<tr><td>ADCF-017</td><td>hard_root</td><td>大数开方</td><td>输入大数，与库函数比对</td><td>误差可接受</td></tr>
+<tr><td>ADCF-018</td><td>threadHold_check_u32</td><td>差值在阈值内</td><td>q1=100,q2=105,th=10调用</td><td>返回true</td></tr>
+<tr><td>ADCF-019</td><td>threadHold_check_u32</td><td>差值超阈值</td><td>q1=100,q2=120,th=10调用</td><td>返回false</td></tr>
+<tr><td>ADCF-020</td><td>threadHold_check_u32</td><td>恰好等于阈值</td><td>q1=100,q2=110,th=10调用</td><td>按设计返回</td></tr>
+<tr><td>ADCF-021</td><td>threadHold_check_u32</td><td>q2>q1情况</td><td>q1=105,q2=100,th=10调用</td><td>正确处理绝对值</td></tr>
+<tr><td>ADCF-022</td><td>threadHold_check_u32</td><td>阈值为0</td><td>q1=100,q2=100,th=0调用</td><td>返回true</td></tr>
+</tbody></table>
+
+<h2>12 BSW层 — AdcM模块</h2>
+<div class="desc"><b>核心职责：</b>实现ADC各通道采样值的滤波处理（含电压、电流、CP反馈、NTC1等通道）。</div>
+<h3>12.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>ADCM-001</td><td>AdcM_GetValidValue</td><td>获取电压通道</td><td>传Voltage_CH调用</td><td>返回电压值</td></tr>
+<tr><td>ADCM-002</td><td>AdcM_GetValidValue</td><td>获取电流通道</td><td>传Current_CH调用</td><td>返回电流值</td></tr>
+<tr><td>ADCM-003</td><td>AdcM_GetValidValue</td><td>获取CP反馈</td><td>传CP_FB_AMP_CH调用</td><td>返回CP值</td></tr>
+<tr><td>ADCM-004</td><td>AdcM_GetValidValue</td><td>获取温度通道</td><td>传NTC1_CH调用</td><td>返回温度值</td></tr>
+<tr><td>ADCM-005</td><td>AdcM_GetValidValue</td><td>无效通道</td><td>传无效Channel调用</td><td>安全返回</td></tr>
+<tr><td>ADCM-006</td><td>ADCM_CallbackSampleValue</td><td>全通道计算</td><td>模拟所有通道数据，调用</td><td>各通道正确更新</td></tr>
+</tbody></table>
+<h3>12.2 内部函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>ADCM-007</td><td>AdcM_get_V_LINE_MCU_update</td><td>电压采样</td><td>输入2048，调用update</td><td>写入电压缓冲区</td></tr>
+<tr><td>ADCM-008</td><td>AdcM_cal_V_LINE_MCU_update</td><td>电压RMS</td><td>填正弦波，调用cal</td><td>电压RMS正确</td></tr>
+<tr><td>ADCM-009</td><td>AdcM_get_I_CS_update</td><td>电流采样</td><td>输入2048，调用update</td><td>写入电流缓冲区</td></tr>
+<tr><td>ADCM-010</td><td>AdcM_cal_I_CS_update</td><td>电流RMS</td><td>填正弦波，调用cal</td><td>电流RMS正确</td></tr>
+<tr><td>ADCM-011</td><td>AdcM_get_CP_FB_AMP_update</td><td>CP采样</td><td>输入1000，调用update</td><td>写入CP缓冲区</td></tr>
+<tr><td>ADCM-012</td><td>AdcM_cal_CP_FB_AMP_update</td><td>CP计算</td><td>填CP数据，调用cal</td><td>CP值正确</td></tr>
+<tr><td>ADCM-013</td><td>AdcM_get_TEMP_NTC1_update</td><td>NTC1采样</td><td>输入1500，调用update</td><td>写入NTC1缓冲区</td></tr>
+<tr><td>ADCM-014</td><td>getTempInterp</td><td>正常温度</td><td>输入对应25°C电压，调用</td><td>返回25°C附近</td></tr>
+<tr><td>ADCM-015</td><td>getTempInterp</td><td>极端低温</td><td>输入对应-40°C电压，调用</td><td>返回-40°C附近</td></tr>
+<tr><td>ADCM-016</td><td>getTempInterp</td><td>极端高温</td><td>输入对应125°C电压，调用</td><td>返回125°C附近</td></tr>
+<tr><td>ADCM-017</td><td>getTempInterp</td><td>超出查表范围</td><td>输入超范围电压，调用</td><td>返回边界值</td></tr>
+<tr><td>ADCM-018</td><td>AdcM_calTEMP_NTC1_update</td><td>NTC1计算</td><td>填采样数据，调用cal</td><td>温度合理</td></tr>
+<tr><td>ADCM-019</td><td>AdcM_get_PGD_update</td><td>接地采样</td><td>输入100，调用update</td><td>写入接地缓冲区</td></tr>
+<tr><td>ADCM-020</td><td>AdcM_cal_PGD_update</td><td>接地正常</td><td>模拟正常采样，调用cal</td><td>状态为OK(0)</td></tr>
+<tr><td>ADCM-021</td><td>AdcM_cal_PGD_update</td><td>接地故障</td><td>模拟异常采样，调用cal</td><td>状态为ERR(1)</td></tr>
+<tr><td>ADCM-022</td><td>AdcM_get_EVDIODE_CHK_update</td><td>二极管采样</td><td>输入2000，调用update</td><td>写入二极管缓冲区</td></tr>
+<tr><td>ADCM-023</td><td>AdcM_cal_EVDIODE_CHK_update</td><td>二极管计算</td><td>填采样数据，调用cal</td><td>计算值正确</td></tr>
+<tr><td>ADCM-024</td><td>AdcM_get_RLY_CHK_MCU_update</td><td>继电器采样</td><td>输入3000，调用update</td><td>写入继电器缓冲区</td></tr>
+<tr><td>ADCM-025</td><td>AdcM_cal_RLY_CHK_MCU_update</td><td>继电器断开</td><td>模拟断开采样，调用cal</td><td>状态BREAK(1)</td></tr>
+<tr><td>ADCM-026</td><td>AdcM_cal_RLY_CHK_MCU_update</td><td>继电器闭合</td><td>模拟闭合采样，调用cal</td><td>状态CONNECT(0)</td></tr>
+<tr><td>ADCM-027</td><td>AdcM_get_MCU_Temp_update</td><td>MCU温度采样</td><td>输入1800，调用update</td><td>写入MCU缓冲区</td></tr>
+<tr><td>ADCM-028</td><td>AdcM_cal_MCU_Temp_update</td><td>MCU温度计算</td><td>填采样数据，调用cal</td><td>温度合理(25~50°C)</td></tr>
+<tr><td>ADCM-029</td><td>AdcM_get_ShortCircuit_update</td><td>短路采样</td><td>输入500，调用update</td><td>写入短路缓冲区</td></tr>
+<tr><td>ADCM-030</td><td>AdcM_cal_ShortCircuit_update</td><td>短路正常</td><td>模拟正常采样，调用cal</td><td>状态OK(0)</td></tr>
+<tr><td>ADCM-031</td><td>AdcM_cal_ShortCircuit_update</td><td>短路故障</td><td>模拟异常采样，调用cal</td><td>状态ERR(1)</td></tr>
+</tbody></table>
+
+<h2>13 BSW层 — EcuM模块</h2>
+<div class="desc"><b>核心职责：</b>实现软件各模块的初始化功能，用于软件的启动运行。</div>
+<h3>13.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>ECUM-001</td><td>EcuM_InitOne</td><td>驱动层初始化</td><td>调用InitOne，检查调用</td><td>所有驱动初始化被调用</td></tr>
+<tr><td>ECUM-002</td><td>EcuM_InitOne</td><td>重复调用</td><td>调用InitOne两次</td><td>第二次不崩溃</td></tr>
+<tr><td>ECUM-003</td><td>EcuM_InitTwo</td><td>应用层初始化</td><td>调用InitTwo，检查调用</td><td>各应用层初始化被调用</td></tr>
+<tr><td>ECUM-004</td><td>EcuM_InitTwo</td><td>重复调用</td><td>调用InitTwo两次</td><td>第二次不崩溃</td></tr>
+<tr><td>ECUM-005</td><td>EcuM_InitThree</td><td>其他模块初始化</td><td>调用InitThree，检查</td><td>OS、看门狗等被调用</td></tr>
+<tr><td>ECUM-006</td><td>EcuM_InitThree</td><td>重复调用</td><td>调用InitThree两次</td><td>第二次不崩溃</td></tr>
+<tr><td>ECUM-007</td><td>ECUM_StartOS</td><td>启动OS</td><td>调用StartOS，检查</td><td>OS正确启动</td></tr>
+</tbody></table>
+
+<h2>14 BSW层 — WdgM模块</h2>
+<div class="desc"><b>核心职责：</b>实现看门狗的喂狗功能，保证程序正常运行，异常时对MCU进行复位。</div>
+<h3>14.1 外部接口函数</h3>
+<table class="t"><thead><tr><th>编号</th><th>函数名</th><th>名称</th><th>步骤概述</th><th>预期结果</th></tr></thead><tbody>
+<tr><td>WDGM-001</td><td>WdgM_Init</td><td>看门狗初始化</td><td>调用Init，检查外设配置</td><td>配置正确</td></tr>
+<tr><td>WDG-002</td><td>WdgM_Init</td><td>重复初始化</td><td>调用Init两次</td><td>第二次不崩溃</td></tr>
+<tr><td>WDGM-003</td><td>WdgM_Trigger</td><td>正常喂狗</td><td>初始化，调用Trigger</td><td>计数器被重置</td></tr>
+<tr><td>WDGM-004</td><td>WdgM_Trigger</td><td>周期喂狗</td><td>超时内周期调用Trigger</td><td>系统不复位</td></tr>
+<tr><td>WDGM-005</td><td>WdgM_Trigger</td><td>未及时喂狗</td><td>初始化，不调用Trigger等待超时</td><td>系统触发复位</td></tr>
+</tbody></table>
+
+<h2>附录A：测试用例统计</h2>
+<table class="t"><thead><tr><th>模块分类</th><th>模块名称</th><th>外部接口函数数</th><th>内部函数数</th><th>用例总数</th></tr></thead><tbody>
+<tr><td>ASW</td><td>CP模块</td><td>4</td><td>5</td><td>31</td></tr>
+<tr><td>ASW</td><td>Charging模块</td><td>10</td><td>0</td><td>26</td></tr>
+<tr><td>ASW</td><td>Diag模块</td><td>7</td><td>53</td><td>70</td></tr>
+<tr><td>ASW</td><td>Discharging模块</td><td>9</td><td>0</td><td>17</td></tr>
+<tr><td>ASW</td><td>LED模块</td><td>2</td><td>6</td><td>16</td></tr>
+<tr><td>ASW</td><td>Factory模块</td><td>1</td><td>3</td><td>8</td></tr>
+<tr><td>ASW</td><td>Log模块</td><td>1</td><td>0</td><td>3</td></tr>
+<tr><td>ASW</td><td>Calibration模块</td><td>5</td><td>5</td><td>19</td></tr>
+<tr><td>ASW</td><td>电压测量模块</td><td>2</td><td>2</td><td>8</td></tr>
+<tr><td>ASW</td><td>电流测量模块</td><td>2</td><td>2</td><td>7</td></tr>
+<tr><td>BSW</td><td>AdcF模块</td><td>5</td><td>0</td><td>22</td></tr>
+<tr><td>BSW</td><td>AdcM模块</td><td>2</td><td>19</td><td>31</td></tr>
+<tr><td>BSW</td><td>EcuM模块</td><td>4</td><td>0</td><td>7</td></tr>
+<tr><td>BSW</td><td>WdgM模块</td><td>2</td><td>0</td><td>5</td></tr>
+<tr><td><b>合计</b></td><td><b>14个模块</b></td><td><b>56</b></td><td><b>95</b></td><td><b>270</b></td></tr>
+</tbody></table>
+
+<h2>附录B：测试用例设计原则</h2>
+<p><b>正常路径测试：</b>验证函数在正常输入条件下的正确输出</p>
+<p><b>边界值测试：</b>验证函数在输入参数边界值时的行为（如0、最大值、阈值±1）</p>
+<p><b>异常路径测试：</b>验证函数在异常输入下的安全处理（如空指针、无效参数）</p>
+<p><b>状态机测试：</b>验证状态转换的正确性（所有状态→所有合法事件→预期新状态）</p>
+<p><b>持续条件测试：</b>验证延时触发类逻辑（持续异常超过阈值才触发）</p>
+<p><b>恢复测试：</b>验证故障恢复逻辑（故障条件消除后是否正确恢复）</p>
+<p><b>稳定性测试：</b>验证函数在高频调用下不崩溃、不泄漏</p>
+
+</body></html>

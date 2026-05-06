@@ -1,0 +1,22 @@
+./objects/lin_driver.o: \
+  ..\..\..\..\..\1_platform\drivers\src\lin_driver.c \
+  ..\..\..\..\..\1_platform\drivers\inc\lin_driver.h \
+  ..\..\..\..\..\1_platform\drivers\inc\lpuart_driver.h \
+  ..\..\..\..\..\1_platform\drivers\inc\clock_driver.h \
+  ..\..\..\..\..\1_platform\devices\startup\system_ZXC400.h \
+  d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  d:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\..\..\..\..\1_platform\drivers\inc\status.h \
+  ..\..\..\..\..\1_platform\devices\include\device_registers.h \
+  ..\..\..\..\..\1_platform\devices\include\ZXC400_core_cm4.h \
+  ..\..\..\..\..\1_platform\devices\include\ZXC400.h \
+  ..\..\..\..\..\1_platform\devices\include\ZXC400_features.h \
+  ..\..\..\..\..\1_platform\devices\include\devassert.h \
+  ..\..\..\..\..\1_platform\drivers\inc\power_manager.h \
+  ..\..\..\..\..\1_platform\drivers\inc\edma_driver.h \
+  ..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h \
+  ..\..\..\..\..\2_rtos\osif\osif.h \
+  ..\..\..\..\..\1_platform\devices\include\status.h \
+  ..\..\..\..\..\1_platform\drivers\inc\clock_driver.h \
+  ..\..\..\..\..\1_platform\drivers\inc\interrupt_manager_111111.h

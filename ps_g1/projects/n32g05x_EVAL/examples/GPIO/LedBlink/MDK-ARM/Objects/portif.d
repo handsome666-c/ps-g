@@ -1,0 +1,15 @@
+.\objects\portif.o: ..\BSW\Mcalif\Portif\Portif.c
+.\objects\portif.o: ..\BSW\Mcalif\Portif\Portif.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\portif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\portif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\portif.o: ..\BSW\Mcalif\Portif\Portif_Cfg.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_rcc.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_gpio.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_exti.h
+.\objects\portif.o: ..\BSW\Mcalif\NVIC\NVIC.h
+.\objects\portif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\misc.h

@@ -1,0 +1,11 @@
+.\objects\portif_cfg.o: ..\BSW\Mcalif\Portif\Portif_Cfg.c
+.\objects\portif_cfg.o: ..\BSW\Mcalif\Portif\Portif_Cfg.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\portif_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\portif_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_rcc.h
+.\objects\portif_cfg.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_gpio.h

@@ -1,0 +1,13 @@
+.\objects\wdgif.o: ..\BSW\Mcalif\Wdgif\Wdgif.c
+.\objects\wdgif.o: ..\BSW\Mcalif\Wdgif\Wdgif.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\wdgif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\wdgif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\wdgif.o: ..\BSW\Mcalif\Wdgif\Wdgif_Cfg.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_wwdg.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_iwdg.h
+.\objects\wdgif.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_rcc.h

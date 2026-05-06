@@ -1,0 +1,11 @@
+.\objects\cpu.o: ..\rt_thread\src\cpu.c
+.\objects\cpu.o: ..\rt_thread\include\rtthread.h
+.\objects\cpu.o: ..\rt_thread\config\rtconfig.h
+.\objects\cpu.o: ..\rt_thread\include\rtdebug.h
+.\objects\cpu.o: ..\rt_thread\include\rtdef.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\cpu.o: ..\rt_thread\include\rtservice.h
+.\objects\cpu.o: ..\rt_thread\include\rtm.h
+.\objects\cpu.o: ..\rt_thread\include\rtthread.h
+.\objects\cpu.o: ..\rt_thread\components\finsh\finsh_api.h
+.\objects\cpu.o: ..\rt_thread\include\rthw.h

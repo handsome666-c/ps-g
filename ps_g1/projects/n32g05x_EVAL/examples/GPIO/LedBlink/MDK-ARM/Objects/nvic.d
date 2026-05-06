@@ -1,0 +1,11 @@
+.\objects\nvic.o: ..\BSW\Mcalif\NVIC\NVIC.c
+.\objects\nvic.o: ..\BSW\Mcalif\NVIC\NVIC.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\nvic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\nvic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\n32g05x_rcc.h
+.\objects\nvic.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\misc.h

@@ -1,0 +1,12 @@
+.\objects\adcm_cfg.o: ..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.c
+.\objects\adcm_cfg.o: ..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.h
+.\objects\adcm_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\adcm_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\adcm_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\adcm_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\adcm_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\adcm_cfg.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\adcm_cfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\adcm_cfg.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF.h
+.\objects\adcm_cfg.o: ..\BSW\ComplexDrivers\AdFiter\ADCF\AdcF_Cfg.h
+.\objects\adcm_cfg.o: ..\BSW\ComplexDrivers\AdFiter\ADCM\AdcM_Cfg.h

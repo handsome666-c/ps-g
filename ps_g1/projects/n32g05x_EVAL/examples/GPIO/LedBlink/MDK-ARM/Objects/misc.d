@@ -1,0 +1,9 @@
+.\objects\misc.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\src\misc.c
+.\objects\misc.o: ..\..\..\..\..\..\firmware\n32g05x_std_periph_driver\inc\misc.h
+.\objects\misc.o: ..\..\..\..\..\..\firmware\CMSIS\device\n32g05x.h
+.\objects\misc.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cm0.h
+.\objects\misc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\misc.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmInstr.h
+.\objects\misc.o: ..\..\..\..\..\..\firmware\CMSIS\core\core_cmFunc.h
+.\objects\misc.o: ..\..\..\..\..\..\firmware\CMSIS\device\system_n32g05x.h
+.\objects\misc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

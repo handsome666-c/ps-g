@@ -1,0 +1,13 @@
+.\objects\ringbuf.o: ..\rt_thread\components\finsh\ringbuf.c
+.\objects\ringbuf.o: ..\rt_thread\components\finsh\ringbuf.h
+.\objects\ringbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtthread.h
+.\objects\ringbuf.o: ..\rt_thread\config\rtconfig.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtdebug.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtdef.h
+.\objects\ringbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtservice.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtm.h
+.\objects\ringbuf.o: ..\rt_thread\include\rtthread.h
+.\objects\ringbuf.o: ..\rt_thread\components\finsh\finsh_api.h
+.\objects\ringbuf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
